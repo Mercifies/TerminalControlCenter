@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
@@ -86,13 +87,18 @@ namespace Terminal_Control_Center
                     // currently broken
                     if (input.Substring(0, 2).Equals("cd"))
                     {
-                        if (input.Substring(2, 6).Contains("../"))
-                        {
-                            
-                            path = path.Substring(0, path.LastIndexOf('\\'));
-                        }
 
-                        Console.WriteLine("It worked");
+                        TermCD cd = new TermCD(input, path);
+                        path = cd.getCD();
+                        
+
+                        //if (input.Substring(2, 6).Contains("../"))
+                        //{
+
+                        //    path = path.Substring(0, path.LastIndexOf('\\'));
+                        //}
+
+                        //Console.WriteLine("It worked");
                     }
 
                     // 11/6/15 - Mercifies
@@ -136,6 +142,20 @@ namespace Terminal_Control_Center
                     if (input.Contains("compress"))
                     {
                         CompressFile cf = new CompressFile(input);
+                    }
+
+
+                    // 11/6/15 - Mercifies
+                    // Listing all files/folders
+                    if (input.Equals("ls -a"))
+                    {
+                        TermLS tls = new TermLS(input, path);
+                        tls.lsAll();
+                    }
+
+                    else if (input.Contains("ls"))
+                    {
+
                     }
 
 
