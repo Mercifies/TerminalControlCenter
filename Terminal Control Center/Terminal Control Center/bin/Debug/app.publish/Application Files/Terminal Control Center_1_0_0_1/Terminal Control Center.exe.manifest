@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Terminal Control Center.exe" version="1.0.0.1" publicKeyToken="5ac9ca988e852ac7" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Terminal Control Center" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Terminal Control Center.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Terminal Control Center.exe" size="20408">
+      <assemblyIdentity name="Terminal Control Center" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>KpGthU41Fn1gNvqIKjQl571PxXlB/yuw18xLYQ/KpcQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Box-Big.ico" size="196092">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>j9ZgQWwKMfn3T40fIFVW9qeT0S/Ok9YbpsCW57ENGWM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Terminal Control Center.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <fileAssociation extension=".tcc" description="Terminal Control Center" progid="1" defaultIcon="Box-Big.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />
+<publisherIdentity name="CN=CHRIS-PC\Chris" issuerKeyHash="5a1fa177864dc578382233a42c0a005d29c64d77" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>W8ArD3/A2hivWsD+xYthfYb0h0Y59ntPx79vTVEf2T4=</DigestValue></Reference></SignedInfo><SignatureValue>W1AvGnukFhoMpNLukeU1XQZI9Y1ESjXLc/e6MJsz4S7eFYn1HZOQDBwZzc0HHVHkHrJX9LL4fDg9HN6VOENaeSK7jc8DP8ArFipR5NhA5Iux1mTN06NIlnBRE/BkCkTC0ycCeKeBJIF6n14o48ejW/nJQlL87S1OTexUrYb20jQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>s6kZGYoFcTFCdFXM44UWUT6p69QTmvYtZsdz5aW3I++0MRZHzAOOtkGBFFtFy7LjKUA3aZa7iMiolGGBjxa/t95to6+yBiITuakezs77TfzMFr6mVt4UhaNJKikmuubxitbTRBaI0HtPhNHgbWr9yoKu+vtrj6zo06xD5JYp4gc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3ed91f514d6fbfc74f7bf6394687f4867d618bc5fec05aaf18dac07f0f2bc05b" Description="" Url=""><as:assemblyIdentity name="Terminal Control Center.exe" version="1.0.0.1" publicKeyToken="5ac9ca988e852ac7" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CHRIS-PC\Chris</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EgSalOuyLUiOxXDOyM80tts4a7RW1TtYbat6SScT5v0=</DigestValue></Reference></SignedInfo><SignatureValue>QhvIqdfJKG7telMdGrVNA58cH2aA0W52lbY2q2E/uqFMmEDWAFifNggnjRqsujVmV0zlVQfle6axsU0FzdfMx/A2RbSlzJXhwQ3dNzjpSENoPNLED/AwtHQeAPZXvbyLrKlqnHaKJj0sZdxdAg6kV+nJ3WXPZ8C4luDa6hA09Zs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>s6kZGYoFcTFCdFXM44UWUT6p69QTmvYtZsdz5aW3I++0MRZHzAOOtkGBFFtFy7LjKUA3aZa7iMiolGGBjxa/t95to6+yBiITuakezs77TfzMFr6mVt4UhaNJKikmuubxitbTRBaI0HtPhNHgbWr9yoKu+vtrj6zo06xD5JYp4gc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQHXmqG6zLY7tGxFDlDICsPzANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwAQwBIAFIASQBTAC0AUABDAFwAQwBoAHIAaQBzMB4XDTE1MTEwNjE4MDkxMVoXDTE2MTEwNjAwMDkxMVowJzElMCMGA1UEAx4cAEMASABSAEkAUwAtAFAAQwBcAEMAaAByAGkAczCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAs6kZGYoFcTFCdFXM44UWUT6p69QTmvYtZsdz5aW3I++0MRZHzAOOtkGBFFtFy7LjKUA3aZa7iMiolGGBjxa/t95to6+yBiITuakezs77TfzMFr6mVt4UhaNJKikmuubxitbTRBaI0HtPhNHgbWr9yoKu+vtrj6zo06xD5JYp4gcCAwEAATANBgkqhkiG9w0BAQsFAAOBgQATw25v39Kec+4zcUOh4EHQG++GR89hmK/ZjvJJxCN5y92GU/zVFvXIbrWPzIV3wImTnzp60fXDGgEdAwO1vpXIWzTm2LxmIlA8CcYxR9q3W8SvRaiGYPhrnMfQ3ozOPO3zvb+dF3WSZ7gI9V4YBmZcZVaavYUwshxX95PhwXcsbg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

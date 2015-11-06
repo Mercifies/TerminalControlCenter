@@ -13,6 +13,7 @@ namespace Terminal_Control_Center
 
         static void Main(string[] args)
         {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string tempInput = "";
             bool done = false;
             bool exit = false;
@@ -26,7 +27,7 @@ namespace Terminal_Control_Center
 
             while (!exit)
             {
-                Console.Write("> ");
+                Console.Write(path + "> ");
                 string input = Console.ReadLine();
                 input = input.ToLower();
                 try
@@ -79,6 +80,29 @@ namespace Terminal_Control_Center
 
 
                     }
+
+                    // 11/6/15 - Mercifies
+                    // change directory command
+                    // currently broken
+                    if (input.Substring(0, 2).Equals("cd"))
+                    {
+                        if (input.Substring(2, 6).Contains("../"))
+                        {
+                            
+                            path = path.Substring(0, path.LastIndexOf('\\'));
+                        }
+
+                        Console.WriteLine("It worked");
+                    }
+
+                    // 11/6/15 - Mercifies
+                    // shortcut for cd ../
+                    else if (input.Equals("../"))
+                    {
+                        path = path.Substring(0, path.LastIndexOf('\\'));
+                    }
+
+
 
                     if (input.Contains("copy"))
                     {

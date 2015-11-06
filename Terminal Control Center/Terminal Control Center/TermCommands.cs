@@ -15,14 +15,16 @@ namespace Terminal_Control_Center
 
         public void getCommands()
         {
-            Console.WriteLine("$NAME        - $ is used to represent a string variable.");
-            Console.WriteLine("#NUMBER      - # is used to represent a numerical variable.");
-            Console.WriteLine("EXIT         - used to exit the program.");
-            Console.WriteLine("CLS          - used to clear the screen.");
-            Console.WriteLine("OPEN DIR     - opens file explorer to select a directory.");
-            Console.WriteLine("PING         - pings a specific IP address. Use -NUMBER to set packets sent.");
-            Console.WriteLine("REPEAT       - repeats the last command executed.");
-            Console.WriteLine("TEXTBLOCK    - used to add comments in a comment block.");
+            Console.WriteLine("$NAME        - string variable");
+            Console.WriteLine("#NUMBER      - #numerical variable");
+            Console.WriteLine("EXIT         - exit the program");
+            Console.WriteLine("CD           - change directory");
+            Console.WriteLine("CLS          - clear screen");
+            Console.WriteLine("MV           - move a file/folder");
+            Console.WriteLine("OPEN DIR     - open file explorer to select a directory");
+            Console.WriteLine("PING         - pings a specific IP address. Use -NUMBER to set packets sent");
+            Console.WriteLine("REPEAT       - repeats the last command executed");
+            Console.WriteLine("TEXTBLOCK    - add comments in a comment block");
 
 
 
