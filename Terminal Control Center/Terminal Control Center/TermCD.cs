@@ -29,9 +29,9 @@ namespace Terminal_Control_Center
             {
                 // doesn't work because dir is the full directory,
                 // we need just the folder name
-                if (input.Contains(dir))
+                if (input.Contains(dir.Substring(dir.LastIndexOf('\\'), dir.Length)))
                 {
-                    path += "/" + dir;
+                    path += "\\" + dir;
                 }
             }
 

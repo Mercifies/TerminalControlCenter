@@ -25,7 +25,9 @@ namespace Terminal_Control_Center
         public void lsAll()
         {
             string[] dirs = Directory.GetDirectories(@path, "*");
+            //DirectoryInfo[] dirsinfo = Directory.GetDirectories(@path, "*"); // gets dir info to see if folder is hidden
             string[] files = Directory.GetFiles(@path, "*");
+            //FileInfo[] filesinfo = Directory.GetFiles(@path, "*"); // gets file info to see if file is hidden
 
             // lists folders in yellow
             foreach (string dir in dirs)
@@ -38,7 +40,8 @@ namespace Terminal_Control_Center
             // lists files in cyan
             foreach (string file in files)
             {
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine(file);
             }
 
