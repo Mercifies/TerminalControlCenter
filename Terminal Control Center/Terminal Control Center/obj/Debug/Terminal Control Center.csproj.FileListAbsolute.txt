@@ -26,3 +26,5 @@ C:\Users\Chris\Documents\GitHub\TerminalControlCenter\Terminal Control Center\Te
 C:\Users\Chris\Documents\GitHub\TerminalControlCenter\Terminal Control Center\Terminal Control Center\bin\Debug\Terminal Control Center.application
 C:\Users\Chris\Documents\GitHub\TerminalControlCenter\Terminal Control Center\Terminal Control Center\obj\Debug\Terminal Control Center.exe.manifest
 C:\Users\Chris\Documents\GitHub\TerminalControlCenter\Terminal Control Center\Terminal Control Center\obj\Debug\Terminal Control Center.application
+C:\Users\Chris\Documents\GitHub\TerminalControlCenter\Terminal Control Center\Terminal Control Center\obj\Debug\Terminal_Control_Center.Properties.Resources.resources
+C:\Users\Chris\Documents\GitHub\TerminalControlCenter\Terminal Control Center\Terminal Control Center\obj\Debug\Terminal Control Center.csproj.GenerateResource.Cache

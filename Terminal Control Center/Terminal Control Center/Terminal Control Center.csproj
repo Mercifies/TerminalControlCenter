@@ -52,7 +52,8 @@
     <ManifestCertificateThumbprint>CEB6FE74129CA8891982CE69DDD1A01D3309D3CE</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Terminal Control Center_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -74,8 +75,14 @@
     <Compile Include="CompressFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TermCD.cs" />
     <Compile Include="TermCommands.cs" />
+    <Compile Include="TermHelp.cs" />
     <Compile Include="TermLS.cs" />
     <Compile Include="TermPing.cs" />
   </ItemGroup>
@@ -105,6 +112,12 @@
       <Progid>1</Progid>
       <DefaultIcon>Box-Big.ico</DefaultIcon>
     </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

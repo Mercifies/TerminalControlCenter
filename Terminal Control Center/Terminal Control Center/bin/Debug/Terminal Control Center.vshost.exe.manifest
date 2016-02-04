@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Terminal Control Center.exe" size="21432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Terminal Control Center.exe" size="25016">
       <assemblyIdentity name="Terminal Control Center" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Rq97YB2aasx77zJ4vGzgS8mPx/AHfaGUZkwnZcVm/T8=</dsig:DigestValue>
+        <dsig:DigestValue>VU989NWDJc0KSuyXmhbqsyBT8kZYC8f2meWf9oaCoSM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

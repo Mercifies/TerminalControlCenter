@@ -22,8 +22,7 @@ namespace Terminal_Control_Center
             List<String> repeat = new List<String>(); // holds last input for repeat function
             Console.Title = "Terminal Control Center";
             Console.ForegroundColor = ConsoleColor.Green;
-            
-
+            Console.BufferHeight = Int16.MaxValue - 1; // allows for maximum scrolling ability
 
 
             while (!exit)
@@ -56,7 +55,9 @@ namespace Terminal_Control_Center
                             }
                             else
                             {
-                                Console.WriteLine("There is no command to repeat!");
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Error: There is no command to repeat!");
+                                Console.ForegroundColor = ConsoleColor.Green;
                             }
                             break;
 
@@ -88,24 +89,41 @@ namespace Terminal_Control_Center
                     if (input.Substring(0, 2).Equals("cd"))
                     {
 
-                        TermCD cd = new TermCD(input, path);
-                        path = cd.getCD();
+                        try
+                        {
+                            TermCD cd = new TermCD(input, path);
+                            path = cd.getCD();
+                        }
+
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Error: " + e.ToString());
+                        }
+
                         
-
-                        //if (input.Substring(2, 6).Contains("../"))
-                        //{
-
-                        //    path = path.Substring(0, path.LastIndexOf('\\'));
-                        //}
-
-                        //Console.WriteLine("It worked");
                     }
+
 
                     // 11/6/15 - Mercifies
                     // shortcut for cd ../
-                    else if (input.Equals("../"))
+                    if (input.Equals("../"))
                     {
-                        path = path.Substring(0, path.LastIndexOf('\\'));
+                        try
+                        {
+                            path = path.Substring(0, path.LastIndexOf('\\'));
+                        }
+                        catch (ArgumentOutOfRangeException e) // outofbounds exception: c:\ has no parent folder
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Error: Directory out of bounds exception. There is no parent folder available.");
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Error: " + e.ToString());
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
                     }
 
 
@@ -186,8 +204,22 @@ namespace Terminal_Control_Center
 
                     if (input.Contains("ping")) // ping ip address
                     {
-                        TermPing tp = new TermPing(input);
-                        tp.getPing();
+                        try
+                        {
+                            TermPing tp = new TermPing(input);
+                            tp.getPing();
+                        }
+
+                        
+
+                        catch (Exception e)
+                        {
+
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Error: " + e.ToString());
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        }
+
                     } // end ping
 
                     if (input.Contains("$")) // handles strings/variables
@@ -206,7 +238,9 @@ namespace Terminal_Control_Center
                 }
                 catch
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("An error has occured.");
+                    Console.ForegroundColor = ConsoleColor.Green;
                 }
 
             } // end while loop (end command prompt)
