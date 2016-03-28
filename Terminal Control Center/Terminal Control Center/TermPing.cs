@@ -105,40 +105,7 @@ namespace Terminal_Control_Center
             {
                 IPAddress[] ip = Dns.GetHostAddresses(address);
                 Ping ping = new Ping();
-
-                //if (inf == true)
-                //{
-                //    bool endless = false;
-                //    int i = 0;
-
-
-                //    while (!endless)
-                //    {
-                //        for (int j = 0; j < ip.Length; j++)
-                //        {
-                //            if (i < 1) // handles most packets
-                //            {
-                //                var reply = ping.Send(ip[j].ToString());
-                //                Console.WriteLine("Reply from {0} | Status: {1} | Time: {2}ms | Packet: " + ((i + 1) + (j)),
-                //                                  reply.Address,
-                //                                  reply.Status,
-                //                                  reply.RoundtripTime);
-
-                //            }
-                //            else // handles proper packet of (# of packets)
-                //            {
-                //                var reply = ping.Send(ip[j].ToString());
-                //                Console.WriteLine("Reply from {0} | Status: {1} | Time: {2}ms | Packet: " + (((i * ip.Length) + 1) + (j)),
-                //                                  reply.Address,
-                //                                  reply.Status,
-                //                                  reply.RoundtripTime);
-
-                //            }
-
-                //        }
-                //    }
-
-                //}
+                
 
 
                 for (int i = 0; i < realTime; ++i)
@@ -169,6 +136,8 @@ namespace Terminal_Control_Center
                     if (Console.KeyAvailable)
                         if (Console.ReadKey(true).Key == ConsoleKey.Escape)
                             break;
+
+                    
 
                 }
                 

@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="Terminal Control Center.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Terminal Control Center" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Terminal Control Center" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
     <commandLine file="Terminal Control Center.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Terminal Control Center.exe" size="25016">
-      <assemblyIdentity name="Terminal Control Center" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Terminal Control Center.exe" size="31160">
+      <assemblyIdentity name="Terminal Control Center" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VU989NWDJc0KSuyXmhbqsyBT8kZYC8f2meWf9oaCoSM=</dsig:DigestValue>
+        <dsig:DigestValue>rl2geLB4L02hu1vN3KKJqWEJr5M7zAaSAxeJ1Rrqjsg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

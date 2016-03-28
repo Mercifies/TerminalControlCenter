@@ -80,11 +80,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="TCCDirectory.cs" />
     <Compile Include="TermCD.cs" />
     <Compile Include="TermCommands.cs" />
     <Compile Include="TermHelp.cs" />
     <Compile Include="TermLS.cs" />
     <Compile Include="TermPing.cs" />
+    <Compile Include="UserDir.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

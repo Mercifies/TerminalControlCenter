@@ -45,10 +45,12 @@ namespace Terminal_Control_Center
                 path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies);
             }
 
-            else if (input.Equals("cd %computer%") || input.Equals("cd %pc%") || input.Equals("cd %comp%")) // Computer shortcut
-            {
-                path = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
-            }
+
+            //currently broken: can't do anything in computer folder.
+            //else if (input.Equals("cd %computer%") || input.Equals("cd %pc%") || input.Equals("cd %comp%")) // Computer shortcut
+            //{
+            //    path = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer);
+            //}
 
             else if (input.Equals("cd %desktop%") || input.Equals("cd %desk%")) // Desktop shortcut
             {
@@ -124,32 +126,45 @@ namespace Terminal_Control_Center
             {
                 path = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
             }
-
             
-
-            
-
-            
-
-            
-
-
-
-
-
-
             #endregion
 
 
             else
             {
+                List<int> tempList = new List<int>();
+                int start = 0;
+                int end = 0;
+
+
+                for (int i = 0; i < path.Length; i++) // adds index of every '\' char to get second to last
+                {
+                    if (path[i].Equals('\\'))
+                    {
+                        tempList.Add(i);
+                    }
+                }
+
+                if (tempList.Count >= 2) // not root C:\
+                {
+                    start = tempList[tempList.Count - 2];
+                }
+                else
+                {
+
+                }
+
+
                 foreach (string dir in dirs)
                 {
                     // doesn't work because dir is the full directory,
                     // we need just the folder name
-                    if (input.Contains(dir.Substring(dir.LastIndexOf('\\'), dir.Length - 1)))
+
+                    //if (input.Contains(dir.Substring(dir.LastIndexOf('\\') - 1, dir.Length - dir.LastIndexOf('\\') - 1)))
+
+                    if (input.Contains(dir.Substring(start, dir.Length - start)))
                     {
-                        path += "\\" + dir;
+                        path += "\\" + dir.Substring(start, dir.Length - 1); // still not working right
                     }
                 }
 
