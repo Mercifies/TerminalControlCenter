@@ -22,9 +22,19 @@ namespace Terminal_Control_Center
             return name;
         }
 
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
         public string getPath()
         {
             return path;
+        }
+
+        public void setPath(string path)
+        {
+            this.path = path;
         }
 
 
